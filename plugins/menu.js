@@ -237,7 +237,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname, args }) => {
 	    {title: `🌟 ${pmenus} Upgrade Premium`, rowId: ".premium", description: "╰► Menampilkan list harga upgrade premium"},
 	    {title: `💰 ${pmenus} Donasi`, rowId: ".donasi", description: '╰► Support BOT agar on 1 Minggu non stop'},
 	{title: `✨ ${pmenus} Rate`, rowId: ".rate", description: '╰► Support BOT agar Semangat update'},
-   {title: `🛒 ${pmenus} Store Oscar-Md`, rowId: ".store", description: '╰► Menampilkan List Store Oscar-Md'},
+   {title: `🛒 ${pmenus} Store Oscar-Md`, rowId: ".store", description: '╰► Menampilkan List Store Ky-Bot Md'},
 	]
 	},{
 	title: `┄┄┄┄┅┅| MENU |┅┅┄┄┄┄`,
