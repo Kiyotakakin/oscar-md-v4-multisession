@@ -702,7 +702,7 @@ export async function participantsUpdate({ id, participants, action }) {
     mediaUrl: "https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ",
     mediaType: 2, 
     description: "https://youtube.com/channel/UCW7iXlE7TgvJMIXQck4NYBQ", 
-    title: '𝘖𝘴𝘤𝘢𝘳-𝘔𝘥☠︎︎',
+    title: '𝙆𝙮-𝘽𝙤𝙩 𝙊𝙛𝙛𝙞𝙘𝙞𝙖𝙡',
     body: wm,
     thumbnail: await(await fetch(action === 'add' ? wel : lea)).buffer(),
     sourceUrl: sgc
