@@ -21,4 +21,4 @@ handler.command = /^nhentai$/i
 handler.tags = ['nsfw']
 handler.help = ['nhentai <code>']
 handler.nsfw = true
-exports default handler
+export default handler
