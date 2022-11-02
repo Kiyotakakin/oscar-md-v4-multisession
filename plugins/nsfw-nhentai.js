@@ -1,21 +1,24 @@
 import fetch from 'node-fetch'
-import { extractImageThumb } from '@adiwajshing/baileys'
-
-let handler = async (m, { conn, args }) => {
-	let code = (args[0] || '').replace(/\D/g, '')
-	if (!code) throw 'Input code' 
-	await m.reply('_In progress, please wait..._')
-	let res = await fetch('https://expressjs-akkun.up.railway.app/nhentai?code=' + code)
-	if (!res.ok) throw await res.statusText
-	let json = await res.json()
-	let buffer = await (await fetch('https://external-content.duckduckgo.com/iu/?u=' + json.result.pages[0])).buffer()
-	let jpegThumbnail = await extractImageThumb(buffer)
-	conn.sendMessage(m.chat, { document: { url: 'https://expressjs-akkun.up.railway.app/nhentai/' + code }, jpegThumbnail, fileName: json.result.title + '.pdf', mimetype: 'application/pdf' }, { quoted: m })
+let handler = async(m, { conn, args, usedPrefix, command}) => {
+    if (!args[0]) throw `Masukkan kode, berikut: ${usedPrefix + command} 304307`
+    let res = await fetch(`https://mxmxk.herokuapp.com/nhentai?code=${args[0]}`)
+    if (!res.ok) throw await res.text()
+    let json = await res.json()
+    let ayaka = `
+𝙉𝙝𝙚𝙣𝙩𝙖𝙞 𝘿𝙚𝙩𝙖𝙞𝙡:
+*Id:* _${json.result.id}_
+*Title:* _${json.result.title.japanese}_
+*Title (Native):* _${json.result.title.english}_
+*language:* _${json.result.lang}_
+*Pages:* _${json.result.num_pages}_
+*favorite:* _${json.result.num_favorites}_
+*Uploaded:* _${json.result.upload_time}_
+*_Button tidak work untuk pesan sementara/wa mod silahkan pakai ${usedPrefix}nhpdf ${args[0]}_*
+`.trim()
+    conn.sendButtonImg(m.chat, await (await fetch(json.result.images.cover)).buffer(), ayaka, packname, 'Download', `.nhpdf ${args[0]}`, m)
 }
-handler.help = ['nhentai']
+handler.command = /^nhentai$/i
 handler.tags = ['nsfw']
-handler.command = /^(nhentai)$/i
-handler.premium = true
-handler.limit = true
-
-export default handler
+handler.help = ['nhentai <code>']
+handler.nsfw = true
+exports default handler
