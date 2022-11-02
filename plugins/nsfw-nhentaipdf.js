@@ -20,4 +20,4 @@ handler.tags = ['nsfw']
 handler.command = /^(nhpdf)$/i
 handler.limit = 1
 handler.nsfw = true
-exports default handler
+export default handler
