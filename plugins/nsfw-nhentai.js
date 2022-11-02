@@ -15,7 +15,7 @@ let handler = async(m, { conn, args, usedPrefix, command}) => {
 *Uploaded:* _${json.result.upload_time}_
 *_Button tidak work untuk pesan sementara/wa mod silahkan pakai ${usedPrefix}nhpdf ${args[0]}_*
 `.trim()
-    conn.sendButtonImg(m.chat, await (await fetch(json.result.images.cover)).buffer(), ayaka, packname, 'Download', `.nhpdf ${args[0]}`, m)
+    conn.sendButtonImg(m.chat, await (await fetch(json.result.images.cover)).buffer(), ayaka, titlebot, 'Download', `.nhpdf ${args[0]}`, m)
 }
 handler.command = /^nhentai$/i
 handler.tags = ['nsfw']
