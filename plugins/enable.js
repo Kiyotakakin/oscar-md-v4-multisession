@@ -156,7 +156,7 @@ const listMessage = {
        chat.antiToxic = isEnable
        break
 case 'autoupnime':
-        if (!isPrems || isOwner) {
+        if (!(isPrems || isOwner)) {
           global.dfail('premium', m, conn)
           throw false
         }
