@@ -23,6 +23,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	{title: "💬 | PcOnly", rowId: `${usedPrefix + command} pconly`},
 	{title: "🏢 | GcOnly", rowId: `${usedPrefix + command} gconly`},
 	{title: "📷 | SwOnly", rowId: `${usedPrefix + command} swonly`},
+{title: "🎌| AnimeUpdate", rowId: `${usedPrefix + command} autoupnime`}, 
 	]
     },
 ]
@@ -154,6 +155,13 @@ const listMessage = {
        }
        chat.antiToxic = isEnable
        break
+case 'autoupnime':
+        if (!isPrems || isOwner) {
+          global.dfail('premium', m, conn)
+          throw false
+        }
+      chat.updateAnime = isEnable
+      break
      case 'autolevelup':
        isUser = true
        user.autolevelup = isEnable
