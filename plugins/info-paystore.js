@@ -1,15 +1,15 @@
 let handler = async (m, { conn }) => {
 	//-----PRICE
 //sewa
-let sh = '15'
-let sn = '25'
-let ss = '35'
+let sh = '5'
+let sn = '15'
+let ss = '30'
 let sp = '40'
 let sv = '75'
 //premium
-let ph = '10'
-let pn = '20'
-let pp = '40'
+let ph = '5'
+let pn = '15'
+let pp = '30'
 let pv = '50'
 let ppm = '75'
 let info = `
@@ -30,9 +30,8 @@ let info = `
 ╰═┅═━––––––๑
 
 *⫹⫺ PAYMENT:*
-• *Pulsa Indosat:* [${ppulsa}]
-• *Dana:* [${pdana}]
-• *Saweria:* 'https://saweria.co/jarotoffc'
+• *Pulsa:* [${ppulsa}]
+• *Dana:* [${pdana}]'
 
 –––––– *🐾 Kebijakan* ––––––
 🗣️: Kak, Kok harganya mahal banget?
