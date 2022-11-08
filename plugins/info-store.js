@@ -4,8 +4,8 @@ let handler = async (m, { conn }) => {
 let sh = '15'
 let info = `
 
-*⫹⫺ Halo Kak Welcome Store Oscar*
- ⫹⫺ 𝘚𝘦𝘮𝘦𝘯𝘵𝘢𝘳𝘢 𝘚𝘵𝘰𝘳𝘦 𝘖𝘴𝘤𝘢𝘳-𝘔𝘥 𝘩𝘢𝘯𝘺𝘢 𝘪𝘯𝘪
+*⫹⫺ Halo Kak Welcome Store Kyto*
+ ⫹⫺ 𝘚𝘦𝘮𝘦𝘯𝘵𝘢𝘳𝘢 𝘚𝘵𝘰𝘳𝘦 𝘩𝘢𝘯𝘺𝘢 𝘪𝘯𝘪
  ⫹⫺ Di Jamin Amanah kok
 `
 const sections = [
@@ -16,10 +16,10 @@ const sections = [
 	    {title: "⛽ NORMAL", rowId: '.order *Paket:* NORMAL • Sewa', description: 'PRICE: ' + sh + 'k (1 minggu)' },
 	]
     }, {
-    title: `⫹⫺ Suport Store Oscar-Md`,
+    title: `⫹⫺ Suport Store Ky-Bot Md`,
 	rows: [
 	   {title: "📮Donasi", rowId: ".donasi"},
-	  {title: "🎀 Iklan Oscar-Md", rowId: ".sosialmedia"},
+	  {title: "🎀 Iklan Ky-Bot Md", rowId: ".sosialmedia"},
 	]
     },
 ]
